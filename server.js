@@ -9,14 +9,13 @@ const app = express();
 const wsServer = new ws.Server({ noServer: true });
 wsServer.on('connection', socket => {
   socket.on('message', function(message, flags){
-    console.log("message", message, flags);
-    socket.send(message);
+    console.log("message", message);
+  socket.send(message);
   });
   
 });
 
 const server = app.listen(4000);
-
 server.on('upgrade', (request, socket, head) => {
     console.log("request, socket, head, socket", request.url)
     if (request.url === '/foo') {
