@@ -4,10 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "postinstall": "webpack --mode production"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
